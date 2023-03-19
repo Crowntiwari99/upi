@@ -1,1 +1,43 @@
-<%= link_to 'register', new_user_path%>
+
+
+<%= stylesheet_link_tag "style" %>
+<%= image_tag "1200px-UPI-Logo-vector.svg.png", id: "image1", size: "400x150" %>
+<h3>Online Payment Services</h3>
+<center>
+<div class: 'ht'>
+<%= link_to 'Create Payment', new_user_path %>
+</div>
+<br/>
+<%= form_with model: @user do |form| %>
+<%= form.label :bank, "Select your Bank" %>
+<br/>
+<%= form.select :bank, ["Bank of Baroda","Bank of India","Bank of Maharashtra","Canara Bank","Central Bank of India","Indian Bank","Indian Overseas Bank","Punjab National Bank","State Bank of India","UCO","Union Bank of India","Axis Bank","Bandhan Bank","CSB Bank","City Union Bank Ltd.","DCB Bank Ltd.","ICICI Bank Ltd.","nduslnd Bank Ltd","IDFC First Bank Ltd","India Post Payments Bank Limited"] %>
+<br/>
+<br/>
+<%= form.label :mobile, "Mobile Number" %>
+<br/>
+<%= form.number_field :mobile %>
+<br/>
+<br/>
+<%= form.label :email, "Email" %>
+<br/>
+<%= form.text_field :email %>
+<br/>
+<br/>
+<%= form.label :amount, "Amount" %>
+<br/>
+<%= form.number_field  :amount %>
+<br/>
+<br/>
+<%= form.label :upi, "Enter UPI PIN" %>
+<br/>
+<%= form.number_field  :upi %>
+<br/>
+<br/>
+<%= form.submit "submit", class: 'button' %>
+</center>
+<% end %>
+<br/>
+<center>
+<%= image_tag "img1.png", id: "footer", alt: "payment" %>
+</center>
