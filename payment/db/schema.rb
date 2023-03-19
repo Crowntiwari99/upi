@@ -15,7 +15,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_160802) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "bank"
+    t.integer "mobile"
+    t.integer "amount"
+    t.string "email"
+    t.string "upi"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
